@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+    #eventContainer {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    #event {
+        text-align: justify;
+        padding: 20px 20px 10px 30px;
+        /* background-color: rgba(37, 37, 37, 0.76); */
+        border-radius: 15px;
+        /* border: 6px ridge rgba(59, 59, 59, 0.623); */
+        background-color: rgba(0, 0, 0, 0.603);
+        box-shadow: 0px 0px 25px 3px rgba(255, 255, 255, 0.349);
+        margin-top: 50px;
+    }
+
+    #event h5 {
+        text-align: left;
+        background-color: rgb(0, 0, 0);
+        border-radius: 15px;
+        padding: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    #event h5:hover {
+        background-color: rgba(187, 38, 38, 0.253);
+    }
+
+    @media screen and (max-width: 1000px) {
+        #eventImg {
+            float: none;
+            width: 80%;
+            text-align: center !important;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container" id="eventContainer">
+    <h3 id="title">Events</h3>
+    <div id="event">
+        <a href="https://www.facebook.com/events/409062829675920/" target="_blank">
+            <h5>X. PUNKMARATON FESZTIVÁL</h5><br>
+        </a>
+        <div id="eventDescription">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+    <div id="event">
+        <a href="https://www.facebook.com/events/409062829675920/" target="_blank">
+            <h5>X. PUNKMARATON FESZTIVÁL</h5><br>
+        </a>
+        <div id="eventDescription">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+    <div id="event">
+        <a href="https://www.facebook.com/events/409062829675920/" target="_blank">
+            <h5>X. PUNKMARATON FESZTIVÁL</h5><br>
+        </a>
+        <div id="eventDescription">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

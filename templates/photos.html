@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}" type="text/css">
+
+<style>
+    #photoDiv {
+        text-align: center;
+    }
+
+    #photoDiv .col-md {
+        text-align: center;
+    }
+
+    #photoDiv img {
+        width: 200px;
+        margin: 10px;
+        box-shadow: 0px 0px 15px 3px rgba(255, 255, 255, 0.349);
+        border-radius: 15px;
+    }
+
+    #photoDiv img:hover {
+        transform: rotate3d(1, 1, 0.1, 0.3rad);
+        box-shadow: 1px 0px 15px 0px #d72323e1;
+        cursor: pointer;
+    }
+
+    #backButton button {
+        text-align: left;
+        margin-left: 30px;
+        margin-bottom: 80px;
+        display: block;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        border-radius: 25px;
+        box-shadow: 0px 0px 25px 1px rgba(201, 24, 24, 0.644);
+        color: #bebebe;
+    }
+    #backButton:hover {
+        text-decoration: none;
+    }
+    #backButton button:hover {
+        color: #d72323;
+    }
+
+    #license {
+        color: rgb(65, 65, 65);
+        font-size: 12px;
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    @media screen and (max-width:800px) {
+        #photoDiv img {
+            width: 150px;
+        }
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <a id="backButton" href="{% url 'gallery' %}"><button class="btn btn-secondary btn-md">BACK TO GALLERY</button></a>
+    <div id="photoDiv">
+        <div class="hes-gallery">
+            <img src="{% static 'images/gallery/1.jpg' %}" alt="image1" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/2.jpg' %}" alt="image2" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/3.jpg' %}" alt="image3" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/4.jpg' %}" alt="image4" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/5.jpg' %}" alt="image4" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/6.jpg' %}" alt="image4" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/7.jpg' %}" alt="image4" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/8.jpg' %}" alt="image4" data-subtext="Subtext" />
+            <img src="{% static 'images/gallery/9.jpg' %}" alt="image4" data-subtext="Subtext" />
+        </div>
+    </div>
+
+    <p id="license">Gallery: Licence: MIT
+        Copyright 2019 Artur Mędrygał</p>
+
+</div>
+<script src="{% static 'js/hes-gallery.min.js' %}"></script>
+{% endblock %}

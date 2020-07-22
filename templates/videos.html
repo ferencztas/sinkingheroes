@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <style>
+        #videoDiv {
+            text-align: center;
+        }
+        #video {
+            text-align: center;
+            padding: 0px 20px 0px 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 25px 9px rgba(255, 255, 255, 0.349);
+            display: inline-block;
+            margin: 30px;
+        }
+        #video iframe {
+            padding: 0;
+            border-radius: 0;
+            padding-bottom: 0;
+            margin-bottom: 5px;
+            width: 400px;
+            height: 200px;
+            border: 2px inset rgba(114, 114, 114, 0.712); 
+        }
+        #video #title {
+            margin: 12px 0px 20px 0px;
+        }
+
+        #backButton button {
+            text-align: left;
+            margin-left: 30px;
+            margin-bottom: 80px;
+            display: block;
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            border-radius: 25px;
+            box-shadow: 0px 0px 25px 1px rgba(201, 24, 24, 0.644);
+            color: #bebebe;
+        }
+        #backButton:hover {
+            text-decoration: none;
+        }
+        #backButton button:hover {
+            color: #d72323;
+        }
+        @media screen and (max-width: 800px) {
+            #video {
+                box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.349);
+            }
+            #video iframe {
+                width: max-content;
+                height: 180px;
+            }
+            #video #title {
+                font-size: 18px;
+            }
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <a id="backButton" href="{% url 'gallery' %}"><button class="btn btn-secondary btn-md">BACK TO GALLERY</button></a>
+    <div id="videoDiv">
+        <div id="video">
+            <h5 id="title">The Promise</h5>
+            <iframe width="450" height="280" src="https://www.youtube.com/embed/_QiSLF5CrJs" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div id="video">
+            <h5 id="title">The Clown</h5>
+            <iframe width="450" height="280" src="https://www.youtube.com/embed/2N8xC28WXTI" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div id="video">
+            <h5 id="title">The Promise</h5>
+            <iframe width="450" height="280" src="https://www.youtube.com/embed/_QiSLF5CrJs" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+        <div id="video">
+            <h5 id="title">The Clown</h5>
+            <iframe width="450" height="280" src="https://www.youtube.com/embed/2N8xC28WXTI" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

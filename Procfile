@@ -1,0 +1,1 @@
+web: gunicorn SinkingHeroes.wsgi --log-file -

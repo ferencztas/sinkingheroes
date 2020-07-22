@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+    #aboutContainer {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    #member img {
+        width: 200px;
+    }
+
+    #member {
+        background-color: rgba(0, 0, 0, 0.603);
+        box-shadow: 0px 0px 25px 3px rgba(255, 255, 255, 0.349);
+        border-radius: 15px;
+        padding: 20px 20px 5px 20px;
+        margin-bottom: 40px;
+    }
+
+    #member #title {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    #member p {
+        text-align: justify;
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container" id="aboutContainer">
+    <div class="row">
+        <div class="col-lg">
+            <div id="member">
+                <h6 id="title">Böröcz Tihamér</h6>
+                <img src="{% static 'images/gallery/4.jpg' %}" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div id="member">
+                <h6 id="title">Pásti Zsolt</h6>
+                <img src="{% static 'images/gallery/7.jpg' %}" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div id="member">
+                <h6 id="title">Kozák J.András</h6>
+                <img src="{% static 'images/gallery/6.jpg' %}" alt="">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

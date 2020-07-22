@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    height:100%;
+}
+
+body {
+    background-image: url("/static/images/background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    min-height:100%;
+    padding:0;
+    margin:0;
+    position:relative;
+}
+
+body::after { 
+    content:'';
+    display:block;
+    height:100px; 
+}
+
+#headerImage {
+    width: 100%;
+}
+
+.navbar {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.9) 100%) !important;
+    padding: 10px;
+    font-family: 'Rowdies', cursive;
+}
+
+#navbarNavAltMarkup {
+    padding-left: 30px;
+    margin-bottom: 0;
+    text-align: left !important;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+    margin-right: 80px;
+    color: #d72323 !important;
+    font-size: 24px !important;
+    font-family: 'Rowdies', cursive !important;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    text-align: justify;
+}
+
+#homeContainer {
+    margin-bottom: 150px !important;
+}
+
+#title {
+    color: #d72323;
+    font-family: 'Rowdies', cursive;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+}
+
+#footer {
+    margin-top: 80px;
+    position:absolute; 
+    bottom:0; 
+    width:100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(109, 109, 109);
+    text-align: center;
+    text-decoration: none;
+}
+
+#footer a {
+    color: rgb(109, 109, 109);
+}
+
+#footer p {
+    margin-top: 20px;
+    margin-bottom: 10;
+    font-size: 14px;
+}
+
+#contactButton {
+    margin: 0;
+    margin-top: -150px;
+    color: white;
+    background-color: rgb(163, 125, 19);
+    border-color: rgb(240, 183, 28);
+    border-radius: 25px;
+    width: 120px;
+    font-size: 16px;
+}
+
+#contactButton:hover {
+    background-color: rgb(209, 158, 16);
+    border-color: rgb(240, 183, 28);
+}
+
+@media screen and (max-width: 950px) {
+    #headerImage {
+        width: 180%;
+        margin-left: -350px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    #headerImage {
+        width: 180%;
+        margin-left: -240px;
+    }
+    .container {
+        margin-top: 20px;
+    }
+    #contactButton {
+        margin-top: -120px;
+        width: 120px;
+        font-size: 16px;
+    }
+    #galeryContainer {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    
+}

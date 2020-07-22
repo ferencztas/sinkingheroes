@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <style>
+        #galeryContainer {
+            margin-top: 10%;
+            margin-bottom: 120px;
+            text-align: center;
+        }
+
+        #musicButton, #photoButton, #videoButton {
+            width: 260px;
+            height: 180px;
+            display: inline-block;
+            background-color: rgba(255, 0, 0, 0.24);
+            /* background-color: #d7232398;
+            border: 10px ridge #b61b1b98; */
+            box-shadow: 0px 0px 25px 3px rgba(255, 255, 255, 0.349);
+            border-radius: 15px;
+            border: 8px ridge rgba(255, 0, 0, 0.226);
+            margin-top: 30px;
+            margin: 20px;
+        }
+        #backButton {
+            margin-left: 30px;
+        }
+
+        #musicButton:hover, #photoButton:hover, #videoButton:hover {
+            /* background-color: #d72323e1; */
+            transform: rotate3d(1, 1, 0.1, 0.3rad);
+            box-shadow: 12px -6px 25px 3px rgba(255, 255, 255, 0.349);
+            /* box-shadow: 12px -6px 25px 3px rgba(255, 255, 255, 0.349); */
+        }
+
+        #musicButton h4, #photoButton h4, #videoButton h4 {
+            color: white;
+            font-size: 26px;
+            font-weight: lighter;
+            font-family: 'Rowdies', cursive;
+            margin-top: 20px;
+        }
+
+        #musicButton img, #photoButton img, #videoButton img {
+            width: 70px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 800px) {
+            #musicButton, #photoButton, #videoButton {
+                width: 210px;
+                height: 140px;
+                box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.349);
+                border: 6px ridge rgba(255, 0, 0, 0.226);
+            }
+            #musicButton h4, #photoButton h4, #videoButton h4 {
+                margin-top: 10px;
+            }
+            #musicButton img, #photoButton img, #videoButton img {
+            width: 60px;
+            margin-top: 10px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div id="galeryContainer" class="container">
+    <a href="{% url 'music' %}">
+        <div id="musicButton">
+            <img src="https://img.icons8.com/metro/100/000000/audio-wave.png" alt="">
+                <h4>Music</h4>
+        </div>
+    </a>
+    <a href="{% url 'photos' %}">
+        <div id="photoButton">
+            <img src="https://img.icons8.com/metro/90/000000/instagram.png" alt="">
+            <h4>Photos</h4>
+        </div>
+    </a>
+    <a href="{% url 'videos' %}">
+        <div id="videoButton">
+            <img src="https://img.icons8.com/metro/90/000000/video.png" alt="">
+            <h4>Videos</h4>
+        </div>
+    </a>
+</div>
+{% endblock %}

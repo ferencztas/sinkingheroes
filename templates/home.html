@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+<style>
+    .navbar {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.747) 0%, rgba(0, 0, 0, 0.9) 100%) !important;
+        padding: 10px;
+        font-family: 'Rowdies', cursive;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div id="header">
+    <img id="headerImage" src="{% static 'images/header.jpg' %}" alt="">
+    <a href="mailto: sinkingheroes666@gmail.com"><button id="contactButton" class="btn btn-lg btn-warning">Contact Us</button></a>
+</div>
+<div id="homeContainer" class="container">
+    <div>
+        <h3 id="title">SOME WORDS ABOUT US</h3>
+        <p>
+            Hi! We're the Sinking Heroes. Our band was formed in September, 2005. The band members are same from the
+            very first time. We made 2 records in these time. Our first record called: Lego, Ralf and the Band Next
+            Door. Our second record called: Mystical Losers. Meanwhile we made some shows...and we wanna make a NEW!
+            record in August, 2010. So, listen our latest tracks and waiting for our new songs!
+            Hi! We're the Sinking Heroes. Our band was formed in September, 2005. The band members are same from the
+            very first time. We made 2 records in these time. Our first record called: Lego, Ralf and the Band Next
+            Door. Our second record called: Mystical Losers. Meanwhile we made some shows...and we wanna make a NEW!
+            record in August, 2010. So, listen our latest tracks and waiting for our new songs!
+
+        </p>
+    </div>
+</div>
+{% endblock %}
